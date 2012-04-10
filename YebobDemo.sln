@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010 Express for Windows Phone
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YebobDemo", "YebobDemo\YebobDemo.csproj", "{D9651168-5576-40C0-BD68-5544974115D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YebobDemoContent", "YebobDemoContent\YebobDemoContent.contentproj", "{BD10A26D-74B9-4F99-BDC6-17A8A6582A42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9651168-5576-40C0-BD68-5544974115D3}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{D9651168-5576-40C0-BD68-5544974115D3}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{D9651168-5576-40C0-BD68-5544974115D3}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{D9651168-5576-40C0-BD68-5544974115D3}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{D9651168-5576-40C0-BD68-5544974115D3}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{D9651168-5576-40C0-BD68-5544974115D3}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{BD10A26D-74B9-4F99-BDC6-17A8A6582A42}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{BD10A26D-74B9-4F99-BDC6-17A8A6582A42}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
