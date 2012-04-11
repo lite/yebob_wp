@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
 using cocos2d;
+using Yebob;
 
 namespace YebobDemo
 {
@@ -26,13 +27,6 @@ namespace YebobDemo
 
             InactiveSleepTime = TimeSpan.FromSeconds(1);
 
-            //// Create XLive FormManager
-            //manager = new XLiveFormManager(this, APISecretKey);
-            //manager.OpenSession();
-
-            // Add XLive FormManager in Components
-            //Components.Add(manager);
-
             CCApplication application = new AppDelegate(this, graphics);
             this.Components.Add(application);
         }
@@ -42,41 +36,34 @@ namespace YebobDemo
             base.Initialize();
         }
 
-        protected override void LoadContent()
-        {
-            Texture2D background = this.Content.Load<Texture2D>(@"images\OpenXLive");
-            //manager.Background = background;
-            //manager.UIExitingEvent += new EventHandler(manager_UIExitingEvent);
-            base.LoadContent();
-        }
-
-        void manager_UIExitingEvent(object sender, EventArgs e)
-        {
-            CCDirector.sharedDirector().runningScene.visible = true;
-            CCDirector.sharedDirector().resume();
-        }
-
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
             {
                 CCDirector.sharedDirector().pause();
-                //MessageBox.Show("Exit ?", "OpenXLive", MessageBoxButtons.OKCancel, Exit);
+                int? ret = MessageBox.Show(
+                    "Exit ?", "Do you want to exit?",
+                    new string[] { "OK", "Cancel" }, 0, MessageBoxIcon.None, MessageBoxEnd);
+                
             }
 
             base.Update(gameTime);
         }
 
-        //void Exit(DialogResult result)
-        //{
-        //    if (result == DialogResult.OK)
-        //    {
-        //        this.Exit();
-        //    }
-        //    else
-        //    {
-        //        CCDirector.sharedDirector().resume();
-        //    }
-        //}
-    }
+        void MessageBoxEnd(IAsyncResult result)
+        {
+            int? dialogResult = Guide.EndShowMessageBox(result);
+            if (dialogResult == null)
+                dialogResult = -1;
+
+            if (dialogResult == 0)
+            {
+                this.Exit();
+            }
+            else
+            {
+                CCDirector.sharedDirector().resume();
+            }
+        }
+   }
 }

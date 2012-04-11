@@ -67,6 +67,7 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MessageBox.cs" />
     <Compile Include="Classes\AppDelegate.cs" />
     <Compile Include="Classes\Game.cs" />
     <Compile Include="Classes\GameOver.cs" />
