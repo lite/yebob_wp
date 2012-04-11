@@ -81,14 +81,7 @@ namespace Yebob
 
         public YebobUI()
         {
-
             InitializeComponent();
-
-            if (DesignerProperties.IsInDesignTool)
-            {
-                return;
-            }
-
 
             StartupMode mode = PhoneApplicationService.Current.StartupMode;
 

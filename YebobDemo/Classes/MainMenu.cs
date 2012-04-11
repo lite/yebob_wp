@@ -2,13 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using cocos2d;
-//using OpenXLive;
+using Yebob;
 
 namespace YebobDemo.Classes
 {
     class MainMenu : Main
     {
+        YebobUI browser;
+
         public static new CCLayer node()
         {
             MainMenu ret = new MainMenu();
@@ -37,41 +40,20 @@ namespace YebobDemo.Classes
             menu.position = new CCPoint(240, 257);
             this.addChild(menu);
 
-
-            CCMenuItemImage Lobby = CCMenuItemImage.itemFromNormalImage(
-               @"images\Lobby",
-               @"images\Lobby1",
-               this,
-               new SEL_MenuHandler(LobbyCallback));
-            Lobby.position = new CCPoint(0, 20);
-
-            CCMenuItemImage Achievements = CCMenuItemImage.itemFromNormalImage(
-                                          @"images\Achievements",
-                                          @"images\Achievements1",
-                                          this,
-                                          new SEL_MenuHandler(AchievementsCallback));
-            Achievements.position = new CCPoint(0, 20);
-
-            CCMenuItemImage Leaderboards = CCMenuItemImage.itemFromNormalImage(
-                                       @"images\Leaderboards",
-                                       @"images\Leaderboards1",
-                                       this,
-                                       new SEL_MenuHandler(LeaderboardsCallback));
-            Leaderboards.position = new CCPoint(0, 20);
-
-            CCMenu OpenXLiveMenu = CCMenu.menuWithItems(Lobby, Leaderboards, Achievements);
-            OpenXLiveMenu.alignItemsHorizontallyWithPadding(40);
-            OpenXLiveMenu.position = new CCPoint(240, 60);
-            //this.addChild(OpenXLiveMenu, 1);
-
             return base.init();
         }
 
         void loginCallback(CCObject sender)
         {
+            MessageBox.Show("YebobDemo", "loginCallback");
+            //YebobUI.Show("http://alpha.yebob.com");
+            CCScene pScene = CCScene.node();
+            pScene.addChild(YebobDemo.Classes.Friends.node());
+            CCDirector.sharedDirector().pushScene(pScene);
+
             //OpenXLive.Forms.XLiveFormFactory.Factory.ShowForm("Logon");
-            CCDirector.sharedDirector().pause();
-            CCDirector.sharedDirector().runningScene.visible = false;
+            //CCDirector.sharedDirector().pause();
+            //CCDirector.sharedDirector().runningScene.visible = false;
         }
 
         void playCallback(CCObject sender)
@@ -83,28 +65,8 @@ namespace YebobDemo.Classes
 
         void aboutCallback(CCObject sender)
         {
-            //MessageBox.Show("about");
+            MessageBox.Show("YebobDemo", "http://www.yebob.com");
         }
 
-        public virtual void AchievementsCallback(CCObject pSender)
-        {
-            //OpenXLive.Forms.XLiveFormFactory.Factory.ShowForm("Achievements");
-            CCDirector.sharedDirector().pause();
-            CCDirector.sharedDirector().runningScene.visible = false;
-        }
-
-        public virtual void LeaderboardsCallback(CCObject pSender)
-        {
-            //OpenXLive.Forms.XLiveFormFactory.Factory.ShowForm("Leaderboard");
-            CCDirector.sharedDirector().pause();
-            CCDirector.sharedDirector().runningScene.visible = false;
-        }
-
-        public virtual void LobbyCallback(CCObject pSender)
-        {
-            //OpenXLive.Forms.XLiveFormFactory.Factory.ShowForm("Lobby");
-            CCDirector.sharedDirector().pause();
-            CCDirector.sharedDirector().runningScene.visible = false;
-        }
     }
 }

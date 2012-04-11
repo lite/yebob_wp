@@ -41,7 +41,7 @@ namespace YebobDemo
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
             {
                 CCDirector.sharedDirector().pause();
-                int? ret = MessageBox.Show(
+                MessageBox.Show(
                     "Exit ?", "Do you want to exit?",
                     new string[] { "OK", "Cancel" }, 0, MessageBoxIcon.None, MessageBoxEnd);
                 

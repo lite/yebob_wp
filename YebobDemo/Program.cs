@@ -1,6 +1,6 @@
 using System;
 
-namespace TweeJump
+namespace YebobDemo
 {
 #if WINDOWS || XBOX
     static class Program
@@ -10,7 +10,7 @@ namespace TweeJump
         /// </summary>
         static void Main(string[] args)
         {
-            using (Game1 game = new Game1())
+            using (Game game = new Game())
             {
                 game.Run();
             }
