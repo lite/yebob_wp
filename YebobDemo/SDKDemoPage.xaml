@@ -19,24 +19,27 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="Yebob Demo" Style="{StaticResource PhoneTextNormalStyle}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1">
-            <StackPanel>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <ScrollViewer>
+                    <StackPanel>
+                        <Button Height="80" Content="Login" Click="onLogin" />
+                        <Button Height="80" Content="MessageBox" Click="onMessageBox" />
+                        <Button Height="80" Content="Install" Click="onInstall" />
+                    </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
                 <TextBlock Text="" Style="{StaticResource PhoneTextNormalStyle}"/>
-                <Border Padding="8,0,0,0" BorderThickness="3" BorderBrush="{StaticResource PhoneAccentBrush}">
-                    <ScrollViewer>
-                        <StackPanel>
-                            <Button Height="100" Content="1" Click="onPlay" />
-                            <Button Height="100" Content="2" Click="onPlay" />
-                            <Button Height="100" Content="3" Click="onPlay" />
-                        </StackPanel>
-                    </ScrollViewer>
-                </Border>
             </StackPanel>
         </Grid>
     </Grid>

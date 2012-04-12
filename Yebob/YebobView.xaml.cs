@@ -18,6 +18,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Text;
 using System.Threading;
+using System.Xml.Linq;
 using Microsoft.Phone.Shell;
 
 namespace Yebob
@@ -148,8 +149,64 @@ namespace Yebob
 
             // prevents refreshing web control to initial state during pages transitions
             if (this.IsBrowserInitialized) return;
+
             try
             {
+                StreamResourceInfo streamInfo = Application.GetResourceStream(new Uri("YebobSourceDictionary.xml", UriKind.Relative));
+
+                if (streamInfo != null)
+                {
+                    StreamReader sr = new StreamReader(streamInfo.Stream);
+                    //This will Read Keys Collection for the xml file
+
+                    XDocument document = XDocument.Parse(sr.ReadToEnd());
+
+                    var files = from results in document.Descendants("FilePath")
+                                select new
+                                {
+                                    path = (string)results.Attribute("Value")
+                                };
+                    StreamResourceInfo fileResourceStreamInfo;
+
+                    using (IsolatedStorageFile appStorage = IsolatedStorageFile.GetUserStoreForApplication())
+                    {
+
+                        foreach (var file in files)
+                        {
+                            fileResourceStreamInfo = Application.GetResourceStream(new Uri(file.path, UriKind.Relative));
+
+                            if (fileResourceStreamInfo != null)
+                            {
+                                using (BinaryReader br = new BinaryReader(fileResourceStreamInfo.Stream))
+                                {
+                                    byte[] data = br.ReadBytes((int)fileResourceStreamInfo.Stream.Length);
+
+                                    string strBaseDir = AppRoot + file.path.Substring(0, file.path.LastIndexOf(System.IO.Path.DirectorySeparatorChar));
+
+                                    if (!appStorage.DirectoryExists(strBaseDir))
+                                    {
+                                        //Debug.WriteLine("Creating Directory :: " + strBaseDir);
+                                        appStorage.CreateDirectory(strBaseDir);
+                                    }
+
+                                    // This will truncate/overwrite an existing file, or 
+                                    using (IsolatedStorageFileStream outFile = appStorage.OpenFile(AppRoot + file.path, FileMode.Create))
+                                    {
+                                        Debug.WriteLine("Writing data for " + AppRoot + file.path + " and length = " + data.Length);
+                                        using (var writer = new BinaryWriter(outFile))
+                                        {
+                                            writer.Write(data);
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                Debug.WriteLine("Failed to write file :: " + file.path + " did you forget to add it to the project?");
+                            }
+                        }
+                    }
+                }
                 YebobBrowser.Navigate(StartPageUri);
                 IsBrowserInitialized = true;
                 AttachHardwareButtonHandlers();
@@ -244,7 +301,6 @@ namespace Yebob
         {
             Debug.WriteLine("YebobBrowser_Navigated :: " + e.Uri.ToString());
         }
-
 
     }
 }

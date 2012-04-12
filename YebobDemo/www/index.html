@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=320; user-scalable=no" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-    <title>Cordova</title>
+    <title>Yebob</title>
 	  <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
       
 	<script type="text/javascript">
@@ -25,10 +25,6 @@
       <script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
        
       <script type="text/javascript">
-
-
-		
-			
 			
 			function init()
 			{
@@ -45,46 +41,26 @@
 			
 			function onDeviceReady(e)
 			{
-				updateDeviceInfo();
 				console.log("deviceready event fired!");
 			}
 			
-			function updateDeviceInfo() 
-			{
-				document.getElementById("platform").innerHTML = device.platform;
-				document.getElementById("version").innerHTML = device.version;
-				document.getElementById("uuid").innerHTML = device.uuid;
-				document.getElementById("name").innerHTML = device.name;
-				document.getElementById("width").innerHTML = screen.width;
-				document.getElementById("height").innerHTML = screen.height;
-				document.getElementById("colorDepth").innerHTML = screen.colorDepth;
-			};
-			
-			Cordova.addConstructor(function()
-			{
-				console.log("Cordova.addConstructor is working");
-			});
-			
-			
-			
-			
 	  </script>
       
-	 
-	  
-
   </head>
   <body onLoad="init();" id="stage" class="theme">
-    <h1>Cordova Tests</h1>
-    <div id="info">
-        <h4>Platform: <span id="platform"> &nbsp;</span></h4>
-        <h4>Version: <span id="version">&nbsp;</span></h4>
-        <h4>UUID: <span id="uuid"> &nbsp;</span></h4>
-        <h4>Name: <span id="name">&nbsp;</span></h4>
-        <h4>Width: <span id="width"> &nbsp;</span>,   Height: <span id="height">&nbsp;
-                   </span>, Color Depth: <span id="colorDepth"></span></h4>
-     </div>
-    <iframe src="http://www.google.com/"></iframe> 
-    
+    <h1>Yebob</h1>
+    <ul>
+      <li>
+        <a href="http://alpha.yebob.com">Yebob</a>
+      </li>
+      <li>
+        <a href="http://www.google.com">Google</a>
+      </li>
+      <li>
+        <a href="http://www.baidu.com">Baidu</a>
+      </li>
+      
+    </ul>
+
   </body>
 </html>
