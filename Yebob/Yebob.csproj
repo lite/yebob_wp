@@ -55,12 +55,12 @@
     <Compile Include="OrientationHelper.cs" />
     <Compile Include="NativeExecution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="YebobUI.xaml.cs">
-      <DependentUpon>YebobUI.xaml</DependentUpon>
+    <Compile Include="YebobView.xaml.cs">
+      <DependentUpon>YebobView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="YebobUI.xaml">
+    <Page Include="YebobView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
