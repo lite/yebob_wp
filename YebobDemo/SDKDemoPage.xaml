@@ -32,14 +32,15 @@
             <StackPanel Grid.Column="0">
                 <ScrollViewer>
                     <StackPanel>
-                        <Button Height="80" Content="Login" Click="onLogin" />
+                        <Button Height="80" Content="/access_token" Click="onAccessToken" />
+                        <Button Height="80" Content="/login" Click="onLogin" />
                         <Button Height="80" Content="MessageBox" Click="onMessageBox" />
                         <Button Height="80" Content="Install" Click="onInstall" />
                     </StackPanel>
                 </ScrollViewer>
             </StackPanel>
             <StackPanel Grid.Column="1">
-                <TextBlock Text="" Style="{StaticResource PhoneTextNormalStyle}"/>
+                <TextBlock Name="respText" Text="" Style="{StaticResource PhoneTextNormalStyle}"/>
             </StackPanel>
         </Grid>
     </Grid>
