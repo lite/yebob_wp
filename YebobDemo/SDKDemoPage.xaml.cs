@@ -159,7 +159,7 @@ namespace YebobDemo
 	    }
 
         // ranking tops
-        private void onRankingLists(object sender, RoutedEventArgs e)
+        private void onRankingTops(object sender, RoutedEventArgs e)
         {
             int count = 30, start_row = 10;
 		    rankingTops(token, rankingListId, count, start_row, "week", "friend", new YebobHandler(postRankingTops));
