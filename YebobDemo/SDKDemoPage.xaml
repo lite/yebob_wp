@@ -34,6 +34,14 @@
                     <StackPanel>
                         <Button Height="80" Content="/access_token" Click="onAccessToken" />
                         <Button Height="80" Content="/login" Click="onLogin" />
+                        <Button Height="80" Content="/logout" Click="onLogout" />
+                        <Button Height="80" Content="/me" Click="onMe" />
+                        <Button Height="80" Content="/share" Click="onShare" />
+                        <Button Height="80" Content="/score/submit" Click="onScoreSubmit" />
+                        <Button Height="80" Content="/ranking/lists" Click="onRankingLists" />
+                        <Button Height="80" Content="/ranking/tops" Click="onRankingTops" />
+                        <Button Height="80" Content="/status/gett" Click="onStatusGet" />
+                        <Button Height="80" Content="/status/exists" Click="onStatusExists" />
                         <Button Height="80" Content="MessageBox" Click="onMessageBox" />
                         <Button Height="80" Content="Install" Click="onInstall" />
                     </StackPanel>
