@@ -43,7 +43,6 @@
                             <Button Height="80" Content="/ranking/tops" Click="onRankingTops" />
                             <Button Height="80" Content="/status/get" Click="onStatusGet" />
                             <Button Height="80" Content="/status/exists" Click="onStatusExists" />
-                            <Button Height="80" Content="MessageBox" Click="onMessageBox" />
                             <Button Height="80" Content="Install" Click="onInstall" />
                         </StackPanel>
                     </ScrollViewer.Content>

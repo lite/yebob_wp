@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace YebobDemo.Utils
+namespace Yebob.Utils
 {
 	internal sealed class IoUtils
 	{

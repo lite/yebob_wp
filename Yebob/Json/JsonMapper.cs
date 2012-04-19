@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace YebobDemo.Json
+namespace Yebob.Json
 {
     public class JsonMapper
     {

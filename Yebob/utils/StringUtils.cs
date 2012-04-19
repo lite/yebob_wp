@@ -1,6 +1,6 @@
 using System;
 
-namespace YebobDemo.Utils
+namespace Yebob.Utils
 {
     internal sealed class StringUtils
     {

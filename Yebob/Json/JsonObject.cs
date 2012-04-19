@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
-using YebobDemo.Utils;
+using Yebob.Utils;
 
-namespace YebobDemo.Json
+namespace Yebob.Json
 {
     public class JsonObject : JsonValue
     {

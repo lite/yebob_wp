@@ -43,6 +43,8 @@
   <ItemGroup>
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Phone.Reactive" />
+    <Reference Include="System.Observable" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -52,6 +54,19 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api.cs" />
+    <Compile Include="Json\IJsonDeserializer.cs" />
+    <Compile Include="Json\IJsonSerializer.cs" />
+    <Compile Include="Json\JsonArray.cs" />
+    <Compile Include="Json\JsonException.cs" />
+    <Compile Include="Json\JsonMapper.cs" />
+    <Compile Include="Json\JsonObject.cs" />
+    <Compile Include="Json\JsonValue.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="utils\ArgumentUtils.cs" />
+    <Compile Include="utils\IoUtils.cs" />
+    <Compile Include="utils\StringUtils.cs" />
+    <Compile Include="utils\UriTemplate.cs" />
     <Compile Include="YebobCommandCall.cs" />
     <Compile Include="OrientationHelper.cs" />
     <Compile Include="NativeExecution.cs" />

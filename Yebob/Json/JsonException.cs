@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace YebobDemo.Json
+namespace Yebob.Json
 {
     public class JsonException : Exception
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace YebobDemo.Json
+namespace Yebob.Json
 {
     public interface IJsonDeserializer
     {

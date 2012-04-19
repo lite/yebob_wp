@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace YebobDemo.Utils
+namespace Yebob.Utils
 {
 	public sealed class ArgumentUtils
 	{

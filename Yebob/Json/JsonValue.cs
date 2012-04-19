@@ -3,9 +3,9 @@ using System.Text;
 using System.Globalization;
 using System.Collections.Generic;
 
-using YebobDemo.Utils;
+using Yebob.Utils;
 
-namespace YebobDemo.Json
+namespace Yebob.Json
 {
     public class JsonValue
     {

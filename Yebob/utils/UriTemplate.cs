@@ -3,7 +3,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
-namespace YebobDemo.Utils
+namespace Yebob.Utils
 {
     public class UriTemplate
     {

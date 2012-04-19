@@ -23,7 +23,7 @@ namespace YebobDemo
         public FriendsPage()
         {
             InitializeComponent();
-            yebobView.StartPageUri = new Uri("http://www.weibo.com", UriKind.Absolute); 
+            yebobView.StartPageUri = new Uri("http://alpha.yebob.com", UriKind.Absolute); 
             //yebobView.StartPageUri = new Uri("/app/www/index.html", UriKind.Relative); 
         }
     }
