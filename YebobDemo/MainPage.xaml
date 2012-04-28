@@ -28,7 +28,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel Grid.Row="0">
-                <Button Height="100" Content="Friends" Click="onFriends" />
+                <Button Height="100" Content="Yebob" Click="onYebob" />
                 <Button Height="100" Content="Play" Click="onPlay" />
                 <Button Height="100" Content="SDK Demo" Click="onSDKDemo" />
             </StackPanel>

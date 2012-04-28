@@ -17,6 +17,11 @@ namespace YebobDemo
             NavigationService.Navigate(new Uri("/GamePage.xaml", UriKind.Relative));
         }
 
+        private void onYebob(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/YebobHomePage.xaml", UriKind.Relative));
+        }
+
         private void onFriends(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/FriendsPage.xaml", UriKind.Relative));
