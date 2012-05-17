@@ -19,7 +19,7 @@ namespace YebobDemo
 
         private void onYebob(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/YebobHomePage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/GameYebobPage.xaml", UriKind.Relative));
         }
 
         private void onFriends(object sender, RoutedEventArgs e)

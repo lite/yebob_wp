@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="YebobDemo.YebobHomePage"
+    x:Class="YebobDemo.GameYebobPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -8,6 +8,7 @@
     xmlns:cc="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="clr-namespace:Yebob;assembly=Yebob"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -17,32 +18,33 @@
 
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="HeaderPanel" Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0">
-                <TextBlock x:Name="PageTitle" Text="Yebob" />
-            </StackPanel>
-            <StackPanel Grid.Column="1">
-                <Image Source="res/install.png" Width="80" HorizontalAlignment="Right"/>
-            </StackPanel>
+        <Grid x:Name="ContentPanel" Grid.Row="0">
+            <my:YebobView HorizontalAlignment="stretch" 
+                   Margin="0,0,0,0"  
+                   Name="yebobView" 
+                   VerticalAlignment="stretch" />
         </Grid>
-        <Grid x:Name="ContentPanel" Grid.Row="1">
-            <cc:TabControl x:Name="mainTab" TabStripPlacement="Bottom" HorizontalContentAlignment="Stretch"
-                           SelectionChanged="onSelectionChanged">
-            </cc:TabControl>
-            <!--<controls:Pivot x:Name="mainPivot" ItemsSource="{Binding PivotItems}" >
-                <controls:Pivot.HeaderTemplate>
-                    <DataTemplate>
-                        <Image Source="{Binding}" />
-                    </DataTemplate>
-                </controls:Pivot.HeaderTemplate>
-            </controls:Pivot>-->
+        <Grid x:Name="HeaderPanel" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="res/install.png" Opacity="0.8"/>
+            </Grid.Background>
+            <ToggleButton Grid.Column="0" BorderThickness="0" Name="buttonHome" Click="onHome">
+                <Image Source="res/home.png"/>
+            </ToggleButton>
+            <ToggleButton Grid.Column="1" BorderThickness="0" Name="button2" Click="onHome">
+                <Image Source="res/rankings.png"/>
+            </ToggleButton>
+            <ToggleButton Grid.Column="2" BorderThickness="0" Name="button3" Click="onHome">
+                <Image Source="res/baton.png"/>
+            </ToggleButton>
         </Grid>
     </Grid>
 </phone:PhoneApplicationPage>

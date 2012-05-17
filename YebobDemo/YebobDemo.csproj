@@ -71,20 +71,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GameYebobPage.xaml.cs">
+      <DependentUpon>GameYebobPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Log.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FriendsPage.xaml.cs">
-      <DependentUpon>FriendsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="GamePage.xaml.cs">
       <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MessageBox.cs" />
-    <Compile Include="YebobHomePage.xaml.cs">
-      <DependentUpon>YebobHomePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SDKDemoPage.xaml.cs">
       <DependentUpon>SDKDemoPage.xaml</DependentUpon>
     </Compile>
@@ -96,19 +93,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="GameYebobPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="FriendsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="GamePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="YebobHomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
