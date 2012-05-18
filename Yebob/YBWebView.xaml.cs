@@ -23,7 +23,7 @@ using Microsoft.Phone.Shell;
 
 namespace Yebob
 {
-    public partial class YebobView : UserControl
+    public partial class YBWebView : UserControl
     {
         private bool IsBrowserInitialized = false;
         private bool OverrideBackButton = false;
@@ -80,7 +80,7 @@ namespace Yebob
             }
         }
 
-        public YebobView()
+        public YBWebView()
         {
             InitializeComponent();
 

@@ -121,10 +121,15 @@
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="res\baton.png" />
-    <Resource Include="res\home.png" />
-    <Resource Include="res\install.png" />
-    <Resource Include="res\rankings.png" />
+    <Resource Include="res\close.png" />
+    <Resource Include="res\yb_shortcut_friends_active.png" />
+    <Resource Include="res\yb_shortcut_friends_default.png" />
+    <Resource Include="res\yb_shortcut_highlight.png" />
+    <Resource Include="res\yb_shortcut_home_active.png" />
+    <Resource Include="res\yb_shortcut_home_default.png" />
+    <Resource Include="res\yb_shortcut_market_active.png" />
+    <Resource Include="res\yb_shortcut_market_default.png" />
+    <Resource Include="res\yb_shortcut_background.png" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="www\cordova.js" />
     <Content Include="www\index.html">

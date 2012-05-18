@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Yebob.YBWebView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone">
+
+    <phone:WebBrowser x:Name="YebobBrowser" 
+        IsScriptEnabled="True" 
+        Navigated="YebobBrowser_Navigated" 
+        Loaded="YebobBrowser_Loaded" 
+        Unloaded="YebobBrowser_Unloaded" 
+        ScriptNotify="YebobBrowser_ScriptNotify" 
+        LoadCompleted="YebobBrowser_LoadCompleted" 
+        Navigating="YebobBrowser_Navigating" 
+        NavigationFailed="YebobBrowser_NavigationFailed" 
+        IsGeolocationEnabled="True" />
+
+</UserControl>
+
+    

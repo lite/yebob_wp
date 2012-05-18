@@ -8,7 +8,7 @@
     xmlns:cc="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:my="clr-namespace:Yebob;assembly=Yebob"
+    xmlns:yb="clr-namespace:Yebob;assembly=Yebob"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -18,14 +18,14 @@
 
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="7*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid x:Name="ContentPanel" Grid.Row="0">
-            <my:YebobView HorizontalAlignment="stretch" 
-                   Margin="0,0,0,0"  
-                   Name="yebobView" 
-                   VerticalAlignment="stretch" />
+            <yb:YBWebView Name="yebobView" 
+                          Margin="0,0,0,0" 
+                          HorizontalAlignment="stretch" 
+                          VerticalAlignment="stretch" />
         </Grid>
         <Grid x:Name="HeaderPanel" Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -34,17 +34,23 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.Background>
-                <ImageBrush ImageSource="res/install.png" Opacity="0.8"/>
+                <ImageBrush ImageSource="res/yb_shortcut_background.png" Opacity="0.8"/>
             </Grid.Background>
-            <ToggleButton Grid.Column="0" BorderThickness="0" Name="buttonHome" Click="onHome">
-                <Image Source="res/home.png"/>
+            <ToggleButton Grid.Column="0" BorderThickness="0"  
+                          Name="buttonHome" Click="onHome">
+                <Image Name="buttonHomeImage"></Image>
             </ToggleButton>
-            <ToggleButton Grid.Column="1" BorderThickness="0" Name="button2" Click="onHome">
-                <Image Source="res/rankings.png"/>
+
+            <ToggleButton Grid.Column="1" BorderThickness="0" 
+                          Name="buttonFriends" Click="onFriends">
+                <Image Name="buttonFriendsImage"></Image>
             </ToggleButton>
-            <ToggleButton Grid.Column="2" BorderThickness="0" Name="button3" Click="onHome">
-                <Image Source="res/baton.png"/>
+
+            <ToggleButton Grid.Column="2" BorderThickness="0" 
+                          Name="buttonMarket" Click="onMarket">
+                <Image Name="buttonMarketImage"></Image>
             </ToggleButton>
+            
         </Grid>
     </Grid>
 </phone:PhoneApplicationPage>
